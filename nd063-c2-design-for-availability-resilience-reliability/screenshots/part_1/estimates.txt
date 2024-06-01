@@ -7,3 +7,16 @@ Write a paragraph or two describing the achievable Recovery Time Objective (RTO)
 3.Minimum RPO for a single AZ outage
 4.Minimum RPO for a single region outage
 
+Answers:
+
+1. Minimum RTO for a Single AZ Outage
+For a single Availability Zone (AZ) outage, AWS automatically handles failover to a standby instance within the same region. Typically, this process is quick and seamless. The RTO in this scenario can be as low as a few minutes, generally estimated between 1 to 5 minutes. This is because the automated failover process is designed to minimize downtime by quickly redirecting traffic to the standby instance without requiring manual intervention.
+
+2. Minimum RTO for a Single Region Outage
+In the event of a single region outage, the failover process involves promoting a read replica in another region to become the new principal database. This process is more complex and involves DNS updates, which can take longer. The RTO for a single region outage is generally longer, typically ranging from 30 minutes to an hour. This timeframe accounts for the time required to promote the read replica, update configurations, and ensure all applications are pointing to the new principal database.
+
+3. Minimum RPO for a Single AZ Outage
+For a single AZ outage, the RPO is near-zero. Since AWS Multi-AZ deployments use synchronous replication, no data is lost during the failover process. The RPO is effectively zero, meaning there is no data loss as long as the outage is within the same region and the failover mechanism works as intended.
+
+4. Minimum RPO for a Single Region Outage
+In the case of a single region outage, the RPO is dependent on the replication lag between the principal database and the read replica in the other region. Typically, AWS read replicas use asynchronous replication, which can introduce a slight delay. The RPO is usually in the order of seconds to a few minutes. This means there might be a small window of data loss corresponding to the replication lag at the time of the outage.
