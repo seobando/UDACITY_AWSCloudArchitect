@@ -1,0 +1,9 @@
+Availability Estimate
+
+Write a paragraph or two describing the achievable Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for this Multi-AZ, multi-region database in terms of:
+
+1.Minimum RTO for a single AZ outage
+2.Minimum RTO for a single region outage
+3.Minimum RPO for a single AZ outage
+4.Minimum RPO for a single region outage
+
