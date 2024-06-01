@@ -1,0 +1,14 @@
+MySQL [(none)]> USE udacity;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> INSERT INTO sample_table (name, age, email) VALUES ('John Doe 2', 20, 'john2@example.com');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+MySQL [udacity]> SELECT * FROM sample_table;
++----+----------+-----+------------------+
+| id | name     | age | email            |
++----+----------+-----+------------------+
+|  1 | John Doe |  30 | john@example.com |
++----+----------+-----+------------------+
+1 row in set (0.001 sec)

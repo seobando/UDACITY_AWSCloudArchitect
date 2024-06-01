@@ -1,0 +1,11 @@
+MySQL [udacity]> INSERT INTO sample_table (name, age, email) VALUES ('John Doe 2', 20, 'john2@example.com');
+Query OK, 1 row affected (0.052 sec)
+
+MySQL [udacity]> SELECT * FROM sample_table;
++----+------------+-----+-------------------+
+| id | name       | age | email             |
++----+------------+-----+-------------------+
+|  1 | John Doe   |  30 | john@example.com  |
+|  2 | John Doe 2 |  20 | john2@example.com |
++----+------------+-----+-------------------+
+2 rows in set (0.001 sec)
