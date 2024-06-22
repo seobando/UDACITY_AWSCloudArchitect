@@ -1,3 +1,7 @@
+variable "region" {
+    default = "us-east-1"
+}
+
 # TODO: Designate a cloud provider, region, and credentials
 provider "aws" {
   region                 = var.region
