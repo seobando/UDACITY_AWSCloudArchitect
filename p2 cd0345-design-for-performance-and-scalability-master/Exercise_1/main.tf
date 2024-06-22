@@ -1,12 +1,12 @@
 # TODO: Designate a cloud provider, region, and credentials
 provider "aws" {
-  region  = "ap-southeast-2"
-  profile = "default"
+  region                 = var.region
+  shared_credential_file = "../credentials"
+  profile                = "default"
 }
 
 # TODO: provision 4 AWS t2.micro EC2 instances named Udacity T2
 resource "aws_instance" "udacity_t2" {
-  count         = 4
   ami           = "ami-0c55b159cbfafe1f0" # Example AMI ID, change as needed
   instance_type = "t2.micro"
   tags = {
