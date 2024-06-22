@@ -4,9 +4,9 @@ variable "region" {
 
 # TODO: Designate a cloud provider, region, and credentials
 provider "aws" {
-  region                 = var.region
-  shared_credential_file = "../credentials"
-  profile                = "default"
+  region                   = var.region
+  shared_credentials_files = "../credentials"
+  profile                  = "default"
 }
 
 # TODO: provision 4 AWS t2.micro EC2 instances named Udacity T2
