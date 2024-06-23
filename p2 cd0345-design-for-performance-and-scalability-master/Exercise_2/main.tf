@@ -6,11 +6,11 @@ provider "aws" {
 
 # Lambda function resource
 resource "aws_lambda_function" "greet_lambda" {
-  filename      = "lambda.zip"  # Lambda deployment package (zip file)
-  function_name = var.function_name
-  role          = aws_iam_role.lambda_exec_role.arn  # IAM role ARN for Lambda execution
-  handler       = "lambda.lambda_handler"  # Name of the function and the handler function
-  runtime       = "python3.8"  # Lambda runtime
+  filename      = var.output_file_name
+  function_name = var.lambda_function_name
+  role          = aws_iam_role.iam_for_lambda.arn
+  handler       = var.lambda_handler
+  runtime       = var.lambda_runtime
 
   # Environment variables (optional)
   environment {
