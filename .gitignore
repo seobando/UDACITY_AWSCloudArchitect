@@ -1,1 +1,9 @@
 credentials
+.terraform.
+terraform.
+tfplan
+LICENSE.txt
+p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/.terraform.lock.hcl
+p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/terraform.tfstate
+p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/terraform.tfstate.backup
+p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/.terraform/providers/registry.terraform.io/hashicorp/aws/5.55.0/windows_amd64/terraform-provider-aws_v5.55.0_x5.exe
