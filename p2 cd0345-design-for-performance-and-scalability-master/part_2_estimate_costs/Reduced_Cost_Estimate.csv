@@ -1,16 +1,24 @@
-Service Name,Estimated Monthly Cost
-EC2 Instances,
-"- Web Servers (t3.medium, 4 instances)",$811
-"- Application Servers (t3.medium, 4 instances)",$811.00
-"- Database Servers (db.m5.large, 2 instances)","$1,507.00"
-RDS (Relational Database Service),
-- Master DB (db.m5.large),$753
-- Read Replica DB (db.m5.large),$753
-Data Transfer (estimated),
-- Between EC2 and Internet,"$1,000"
-- Between EC2 and RDS,$150
-NAT Gateway,$70
-CloudFront,$300.00
-S3 Bucket,$20
-Elastic Load Balancer (ELB),$200
-Total Estimated Cost,"$6,375"
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,5168.610000000001,62023.32,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,2916.9632,35003.56,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 2), Advance EC2 instance (r6a.4xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,841.836,10102.03,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 2), Advance EC2 instance (c6g.4xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,1054.65,12655.80,USD,,"Storage amount (30 GB), Storage for each RDS instance (General Purpose SSD (gp2)), Nodes (1), Instance type (db.m2.4xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (OnDemand)"
+My Estimate,US East (N. Virginia),,Classic Load Balancer,0,310.25,3723.00,USD,,"Number of Classic Load Balancers (1), Processed bytes per CLB (50 GB per hour)"
+My Estimate,US East (N. Virginia),,S3 Standard,0,23,276.00,USD,,S3 Standard storage (1000 GB per month)
+My Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,,
+My Estimate,US East (N. Virginia),,VPN Connection,0,0,0.00,USD,,Working days per month (22)
+My Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,0,0.00,USD,,
+My Estimate,US East (N. Virginia),,Public IPv4 Address,0,0,0.00,USD,,
+My Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,,"DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Gateway Load Balancer,0,21.910000000000004,262.92,USD,,"Number of Availability Zones that Gateway Load Balancer is deployed to (1), Number of Gateway Load Balancer Endpoints (1), Average connection/flow duration (1 seconds), Average number of new connections/flows (1 per second), Total processed bytes (1 GB per hour)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."

@@ -1,14 +1,14 @@
 ﻿Estimate summary
 Upfront cost,Monthly cost,Total 12 months cost,Currency
-0,9419.67,113036.04,USD
+0,18214.989999999998,218579.88,USD
 ,,* Includes upfront cost
 
 
 Detailed Estimate
 Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
-My Estimate,US East (N. Virginia),,Amazon EC2 ,0,4697.696,56372.35,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 2), Advance EC2 instance (r6i.8xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
-My Estimate,US East (N. Virginia),,Amazon EC2 ,0,841.836,10102.03,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 2), Advance EC2 instance (c6g.4xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
-My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,3524.97,42299.64,USD,,"Storage amount (30 GB), Storage for each RDS instance (General Purpose SSD (gp2)), Nodes (1), Instance type (db.m5.12xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (OnDemand)"
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,10042.464,120509.57,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 2), Advance EC2 instance (x2gd.metal), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,3120.02,37440.24,USD,,"Tenancy (Dedicated Instances), Operating system (Linux), Workload (Consistent, Number of instances: 2), Advance EC2 instance (r5.8xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,4697.349999999999,56368.20,USD,,"Storage amount (30 GB), Storage for each RDS instance (General Purpose SSD (gp2)), Nodes (1), Instance type (db.m5.16xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (OnDemand)"
 My Estimate,US East (N. Virginia),,Classic Load Balancer,0,310.25,3723.00,USD,,"Number of Classic Load Balancers (1), Processed bytes per CLB (50 GB per hour)"
 My Estimate,US East (N. Virginia),,S3 Standard,0,23,276.00,USD,,S3 Standard storage (1000 GB per month)
 My Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,,
