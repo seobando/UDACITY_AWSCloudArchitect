@@ -1,8 +1,8 @@
 Service Name,Minimum Estimated Cost
 EC2 Instances,
-"- Web Servers (t3.medium, 2 AZs, autoscaled)","$1,000"
-"- Application Servers (t3.medium, 2 AZs, autoscaled)","$2,000"
-"- Database Servers (db.m5.large, 2 AZs)","$3,000"
+"- Web Servers (t3.medium)","$1,000"
+"- Application Servers (t3.medium)","$2,000"
+"- Database Servers (db.m5.large)","$3,000"
 RDS (Relational Database Service),
 - Master DB (db.r5.large),"$1,000"
 - Read Replica DB (db.r5.large),$500.00
