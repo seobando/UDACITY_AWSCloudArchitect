@@ -1,0 +1,16 @@
+Service Name,Estimated Monthly Cost
+EC2 Instances,
+"- Web Servers (t3.medium, 4 instances)",$811
+"- Application Servers (t3.medium, 4 instances)",$811.00
+"- Database Servers (db.m5.large, 2 instances)","$1,507.00"
+RDS (Relational Database Service),
+- Master DB (db.m5.large),$753
+- Read Replica DB (db.m5.large),$753
+Data Transfer (estimated),
+- Between EC2 and Internet,"$1,000"
+- Between EC2 and RDS,$150
+NAT Gateway,$70
+CloudFront,$300.00
+S3 Bucket,$20
+Elastic Load Balancer (ELB),$200
+Total Estimated Cost,"$6,375"
