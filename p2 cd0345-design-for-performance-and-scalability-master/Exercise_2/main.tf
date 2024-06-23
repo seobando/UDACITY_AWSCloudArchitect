@@ -8,26 +8,20 @@ provider "aws" {
 # IAM role for Lambda execution
 resource "aws_iam_role" "lambda_exec_role" {
   name               = "lambda_exec_role"
-  assume_role_policy = jsonencode({
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Action": "sts:AssumeRole",
-        "Principal": {
-          "Service": "lambda.amazonaws.com"
-        },
-        "Effect": "Allow",
-        "Sid": ""
-      }
-    ]
-  })
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
 }
-
-
-# IAM policy attachment for Lambda execution role (allow logging)
-resource "aws_iam_role_policy_attachment" "lambda_exec_attach" {
-  role       = aws_iam_role.lambda_exec_role.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+EOF
 }
 
 
@@ -35,7 +29,7 @@ resource "aws_iam_role_policy_attachment" "lambda_exec_attach" {
 resource "aws_lambda_function" "greet_lambda" {
   filename      = var.output_file_name
   function_name = var.lambda_function_name
-  role          = aws_iam_role.iam_for_lambda.arn
+  role          = aws_iam_role.lambda_exec_role.arn
   handler       = var.lambda_handler
   runtime       = var.lambda_runtime
 
@@ -48,10 +42,40 @@ resource "aws_lambda_function" "greet_lambda" {
 }
 
 
+# Lambda Logging policy
+resource "aws_iam_policy" "lambda_logging" {
+  name        = "lambda_logging"
+  path        = "/"
+  description = "IAM policy for logging from a lambda"
+
+  policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*",
+      "Effect": "Allow"
+    }
+  ]
+}
+EOF
+}
+
+
+resource "aws_iam_role_policy_attachment" "lambda_logs" {
+  role       = aws_iam_role.lambda_exec_role.name
+  policy_arn = aws_iam_policy.lambda_logging.arn
+}
+
+
 # Package the Lambda function code
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_dir  = "${path.module}"
-  output_path = "${path.module}/lambda.zip"
-  depends_on  = [aws_iam_role_policy_attachment.lambda_exec_attach]
+  source_file = var.source_file
+  output_path = var.output_file_name
 }
