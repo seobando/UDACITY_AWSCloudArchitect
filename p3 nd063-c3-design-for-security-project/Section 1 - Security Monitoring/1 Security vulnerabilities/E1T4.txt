@@ -1,6 +1,9 @@
 Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
 
 # Poor practice 1
-
+Bad IAM Role and Policy definition. 
+The to access the recipes and the attack similation is the same. A role should have access only to what is meant to do.
 
 # Poor practice 2
+Bad Security Access to Cloud Infrastructure.
+The applications shouldn't be deployed into a public subnet because this leaves the environment open to exploitation.
