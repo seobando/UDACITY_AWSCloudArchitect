@@ -3,17 +3,4 @@ credentials
 terraform.
 tfplan
 LICENSE.txt
-p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/.terraform.lock.hcl
-p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/terraform.tfstate
-p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/terraform.tfstate.backup
-p2 cd0345-design-for-performance-and-scalability-master/Exercise_1/.terraform/providers/registry.terraform.io/hashicorp/aws/5.55.0/windows_amd64/terraform-provider-aws_v5.55.0_x5.exe
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_1/.terraform.lock.hcl
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_1/terraform.tfstate
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_1/.terraform/providers/registry.terraform.io/hashicorp/aws/5.55.0/windows_amd64/terraform-provider-aws_v5.55.0_x5.exe
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_1/terraform.tfstate.backup
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_2/.terraform.lock.hcl
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_2/greet_lambda.zip
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_2/terraform.tfstate
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_2/terraform.tfstate.backup
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_2/.terraform/providers/registry.terraform.io/hashicorp/archive/2.4.2/windows_amd64/terraform-provider-archive_v2.4.2_x5.exe
-p2 cd0345-design-for-performance-and-scalability-master/terraform/Exercise_2/.terraform/providers/registry.terraform.io/hashicorp/aws/5.55.0/windows_amd64/terraform-provider-aws_v5.55.0_x5.exe
+project3.pem
