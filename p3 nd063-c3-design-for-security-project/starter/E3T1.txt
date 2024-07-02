@@ -1,3 +1,5 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
+i-0d4b83c1aec70ffdd is performing SSH brute force attacks against 10.192.10.17. Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password
 
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+AWS GuardDuty detects SSH brute force attacks by analyzing VPC Flow Logs for abnormal connection patterns, using threat intelligence to identify known malicious activities, and employing machine learning to detect deviations from normal behavior. In the case of the described attack, GuardDuty would have identified the excessive failed SSH login attempts from instance i-0d4b83c1aec70ffdd to 10.192.10.17, triggering an alert for a potential brute force attack.
