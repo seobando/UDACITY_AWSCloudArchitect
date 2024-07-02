@@ -1,13 +1,22 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+Checkov: A static code analysis tool for infrastructure-as-code.
+TFLint: A linter for Terraform templates.
 
 ### Example vulnerability
+Unencrypted S3 Buckets: If an S3 bucket is defined without server-side encryption enabled, sensitive data could be stored unencrypted.
 
 ##Scan AMI’s or containers for OS vulnerabilities
+Clair: An open-source project for the static analysis of vulnerabilities in application containers (e.g., Docker).
+Anchore Engine: An open-source project that provides a deep image inspection, analysis, and scanning of container images
 
 ### Example vulnerability
+CVE-2021-3156 (Sudo Vulnerability): A heap-based buffer overflow vulnerability in Sudo that allows any unprivileged user to gain root privileges on the vulnerable host.
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
+CloudSploit: A security and configuration monitoring tool for AWS.
+Prowler: An open-source security tool to perform AWS security best practices assessments, audits, incident response, continuous monitoring, hardening, and forensics readiness.
 
 ### Example vulnerability
+Open Security Groups: Security groups with rules that allow inbound traffic from any IP address (0.0.0.0/0) on ports that should be restricted, such as SSH (port 22) or RDP (port 3389)
